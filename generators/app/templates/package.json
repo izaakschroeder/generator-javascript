@@ -1,0 +1,25 @@
+{
+	"version": "0.1.0",
+	"keywords": [  ],
+	"license": "CC0-1.0",
+	"scripts": {
+		"mocha": "NODE_PATH=lib NODE_ENV=test node_modules/.bin/_mocha -r test/helpers/chai -r test/helpers/sinon -R spec test/spec",
+		"spec": "istanbul cover npm run mocha",
+		"lint": "eslint --ignore-path .gitignore .",
+		"coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100"
+	},
+	"tests": [ "lint", "spec", "coverage" ],
+	"devDependencies": {
+		"eslint": "*",
+		"eslint-plugin-nodeca": "*",
+		"mocha": "*",
+		"istanbul": "*",
+		"chai": "*",
+		"chai-things": "*",
+		"sinon": "*",
+		"sinon-chai": "*"
+	},
+	"engines": {
+		"node": ">=0.10"
+	}
+}
